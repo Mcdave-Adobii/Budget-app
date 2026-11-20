@@ -44,6 +44,12 @@
           To-do
         </button>
       </div>
+      <button
+        id="reminderBox"
+        class="reminder"
+        hidden
+        onclick="showTab('todo')"
+      ></button>
 
       <!-- BUDGET -->
       <section id="budget">
@@ -98,13 +104,17 @@
       <!-- TODO -->
       <section id="todo" hidden>
         <form class="card" id="todoForm">
+          <input
+            id="task"
+            type="text"
+            placeholder="Add a task"
+            maxlength="100"
+          />
           <div class="row">
-            <input
-              id="task"
-              type="text"
-              placeholder="Add a task"
-              maxlength="100"
-            />
+            <label class="datefield">
+              Due date
+              <input id="dueDate" type="date" />
+            </label>
             <button class="primary" type="submit">Add task</button>
           </div>
           <p class="msg" id="todoMsg" role="alert"></p>
